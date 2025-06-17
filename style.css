@@ -1,0 +1,231 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* RIASEC Sections */
+.riasec-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.riasec-section p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.riasec-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.riasec-section ul li {
+    margin-bottom: 10px;
+}
+
+.riasec-section label {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align items in the center */
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.riasec-section input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+    /* Optional: Custom checkbox styling can be added here or using libraries */
+    transform: scale(1.2); /* Slightly larger checkboxes */
+}
+
+
+/* Navigation Buttons */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.navigation-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#prev-btn {
+    background-color: #6c757d;
+}
+
+#prev-btn:hover {
+    background-color: #5a6268;
+}
+
+#submit-btn {
+    background-color: #28a745;
+}
+
+#submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Results Display */
+#results-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border: 1px solid #b8db c9;
+    border-radius: 5px;
+}
+
+#results-container h2 {
+    color: #155724;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#results-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#results-container ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    padding: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+#results-container ul li:last-child {
+    border-bottom: none;
+}
+
+#results-container p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#results-container p strong {
+    color: #007bff; /* Highlight dominant type */
+}
+
+/* Career Suggestions Styling */
+#results-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.3em;
+}
+
+#career-suggestions-list {
+    list-style: disc; /* Use disc for actual career items */
+    padding-left: 20px; /* Indent career list */
+    margin-bottom: 15px;
+}
+
+#career-suggestions-list li {
+    margin-bottom: 5px;
+    font-size: 1em; /* Reset from potential parent styling if needed */
+    padding: 2px 0; /* Minor padding for readability */
+    border-bottom: none; /* Remove border from general li in results */
+}
+
+#career-suggestions-list li strong { /* Styling for the "For TYPE:" header */
+    font-weight: bold;
+    color: #1a5f7a; /* A distinct color for the type header */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .navigation-buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+        width: calc(33.333% - 10px); /* Adjust button width for smaller screens */
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 10px 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .riasec-section ul li {
+        font-size: 0.95em;
+    }
+    .navigation-buttons button {
+        width: calc(50% - 10px); /* Two buttons per row */
+    }
+    #submit-btn {
+        width: calc(100% - 10px); /* Full width for submit on very small screens */
+    }
+}

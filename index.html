@@ -1,13 +1,86 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIASEC Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RIASEC Test</h1>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+        <div id="riasec-sections">
+            <section id="realistic" class="riasec-section">
+                <h2>Realistic</h2>
+                <p>Do you enjoy tasks that involve:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="realistic" value="q1"> Working with tools and machinery?</label></li>
+                    <li><label><input type="checkbox" name="realistic" value="q2"> Building or repairing things?</label></li>
+                    <li><label><input type="checkbox" name="realistic" value="q3"> Outdoor activities like farming or construction?</label></li>
+                </ul>
+            </section>
+
+            <section id="investigative" class="riasec-section" style="display: none;">
+                <h2>Investigative</h2>
+                <p>Are you interested in:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="investigative" value="q1"> Solving complex problems?</label></li>
+                    <li><label><input type="checkbox" name="investigative" value="q2"> Conducting research and experiments?</label></li>
+                    <li><label><input type="checkbox" name="investigative" value="q3"> Working with data and theories?</label></li>
+                </ul>
+            </section>
+
+            <section id="artistic" class="riasec-section" style="display: none;">
+                <h2>Artistic</h2>
+                <p>Do you find yourself drawn to:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="artistic" value="q1"> Creative expression through music, art, or writing?</label></li>
+                    <li><label><input type="checkbox" name="artistic" value="q2"> Designing and decorating?</label></li>
+                    <li><label><input type="checkbox" name="artistic" value="q3"> Unstructured and imaginative activities?</label></li>
+                </ul>
+            </section>
+
+            <section id="social" class="riasec-section" style="display: none;">
+                <h2>Social</h2>
+                <p>Do you prefer activities that involve:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="social" value="q1"> Helping and teaching others?</label></li>
+                    <li><label><input type="checkbox" name="social" value="q2"> Working in teams and collaborating?</label></li>
+                    <li><label><input type="checkbox" name="social" value="q3"> Understanding and empathizing with people?</label></li>
+                </ul>
+            </section>
+
+            <section id="enterprising" class="riasec-section" style="display: none;">
+                <h2>Enterprising</h2>
+                <p>Are you motivated by:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="enterprising" value="q1"> Leading and persuading others?</label></li>
+                    <li><label><input type="checkbox" name="enterprising" value="q2"> Starting new projects or businesses?</label></li>
+                    <li><label><input type="checkbox" name="enterprising" value="q3"> Achieving goals and making decisions?</label></li>
+                </ul>
+            </section>
+
+            <section id="conventional" class="riasec-section" style="display: none;">
+                <h2>Conventional</h2>
+                <p>Do you enjoy tasks that are:</p>
+                <ul>
+                    <li><label><input type="checkbox" name="conventional" value="q1"> Organized and structured?</label></li>
+                    <li><label><input type="checkbox" name="conventional" value="q2"> Working with data and numbers in a precise way?</label></li>
+                    <li><label><input type="checkbox" name="conventional" value="q3"> Following established procedures and guidelines?</label></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prev-btn" style="display: none;">Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="submit-btn" style="display: none;">Submit</button>
+        </div>
+
+        <!-- Results will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
